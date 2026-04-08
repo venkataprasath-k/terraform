@@ -96,7 +96,7 @@ resource "aws_instance" "Ansible_server" {
   subnet_id              = aws_subnet.public_subnet.id
   vpc_security_group_ids = [aws_security_group.ec2-security-group.id]
   key_name               = "MASTER"
-  private_ip             = "10.0.1.120" 
+  private_ip             = "10.0.1.150" 
   associate_public_ip_address = true
  
   tags = {
