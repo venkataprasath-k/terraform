@@ -178,7 +178,7 @@ resource "aws_instance" "WEBSERVER" {
   associate_public_ip_address = true
  
   tags = {
-    Name = "Master"
+    Name = "Webserver"
   }
 }
 
@@ -192,10 +192,8 @@ resource "aws_instance" "APPSERVER" {
   vpc_security_group_ids = [aws_security_group.app_sg.id]
   key_name               = "MASTER"
   private_ip             = "10.0.2.150"
-  associate_public_ip_address = true
-
   tags = {
-    Name = "Master"
+    Name = "Appserver"
   }
 }
 
